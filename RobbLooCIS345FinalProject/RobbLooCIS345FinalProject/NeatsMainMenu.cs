@@ -71,13 +71,13 @@ namespace RobbLooCIS345FinalProject
             switch (intUserInput)
             {
                 case 1:
-                    //list flights
+                    DummyFlightInfo();
                     break;
                 case 2:
                     //add a new flight
                     //first have initialize an instance of the class (create a new object of the class)
                     SubMenu = new NeatsSubMenu();
-                    SubMenu.DisplaySubMenu();                    
+                    SubMenu.DisplaySubMenu();
                     break;
                 case 3:
                     //select a flight
@@ -90,8 +90,36 @@ namespace RobbLooCIS345FinalProject
                     Environment.Exit(0);
                     break;
 
-                   
+
             }
+        }
+
+
+            //Method for displaying default flight info initially before array is populated by our data
+        //There is probably a better way to do this, just messing around with arrays at this point.
+        //pressing any key takes us back to main menu
+        public void DummyFlightInfo()
+        {
+            Console.Clear();
+
+            string[,] FlightArray = { {"700","Seattle","Phoenix"}, 
+                                       {"600","Chicago","New York"},
+                                       {"500","Phoenix","San Diego"}, 
+                                       {"656","Denver","Austin"}};
+
+            Console.WriteLine("\t\t\tCurrent Flights - NEATS system\n\n");
+            Console.WriteLine("\t1. #{0}\t\t{1}\t-->\t{2}", FlightArray[0, 0], FlightArray[0, 1], FlightArray[0, 2]);
+            Console.WriteLine("\t2. #{0}\t\t{1}\t-->\t{2}", FlightArray[1, 0], FlightArray[1, 1], FlightArray[1, 2]);
+            Console.WriteLine("\t3. #{0}\t\t{1}\t-->\t{2}", FlightArray[2, 0], FlightArray[2, 1], FlightArray[2, 2]);
+            Console.WriteLine("\t4. #{0}\t\t{1}\t-->\t{2}", FlightArray[3, 0], FlightArray[3, 1], FlightArray[3, 2]);
+
+            Utilities.Back();
+            Console.Clear();
+            DisplayMenu();
+            
+            
+           
+        
                     
 
         }

@@ -18,18 +18,18 @@ namespace RobbLooCIS345FinalProject
         }
 
         //get/set assessor for FlightNumber using the ArrayIndex Parameter 
-        public string FlightNumber ()
-        {
+       /* public string FlightNumber ()
+       {
 
           set //struggling to  somehow get/set an array. I emailed him for help, but...idk how much help he can provide.
             {
-                FlightArray[,0]=value;
+                //FlightArray[,0]=value;
 
             }
         }
-            
+            */
            
-        } 
+        
 
     }
 
