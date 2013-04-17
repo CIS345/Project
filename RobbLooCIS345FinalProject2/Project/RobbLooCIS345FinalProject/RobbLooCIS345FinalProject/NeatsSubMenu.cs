@@ -52,7 +52,9 @@ namespace RobbLooCIS345FinalProject
                     break;
                 case 6:
                     //exit the system entirely
-                    Environment.Exit(0);
+                    NeatsMainMenu.getParentForm();
+    
+                 //Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("Invalid input");
